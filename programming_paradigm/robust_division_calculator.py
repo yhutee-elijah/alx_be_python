@@ -1,8 +1,16 @@
 def safe_divide(numerator, denominator):
     try:
-        return numerator / denominator
+        num = float(numerator)
+        den = float(denominator)
+        
+        return num / den
+        return result
+        
     except ZeroDivisionError:
-        return None
+        return "Error: Cannot divide by zero." 
+
+    except ValueError:
+        return "Error: Please enter numeric values only."
     
-    if __name__ == "__main__":
-        main()
+    except Exception as e:
+        return f"an unexpected error occured: {e}"
